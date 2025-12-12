@@ -11,11 +11,11 @@ with open("tfidf_vectorizer.pkl", "rb") as f:
 # load vector DB
 vector_store = Chroma(
     collection_name="document_collection",
-    persist_directory=r"C:\Users\RakeshLakmishetti\Desktop\New folder (2)\vector_db"
+    persist_directory=r"vector_db_path"
 )
 
 # question
-query = "What is the First name?"
+query = "What does the document say about Adaptive Radiation?"
 
 # embed query
 query_vec = vectorizer.transform([query]).toarray().astype(np.float32)
@@ -39,3 +39,4 @@ reply = client.chat.completions.create(
 )
 
 print(reply.choices[0].message.content)
+
