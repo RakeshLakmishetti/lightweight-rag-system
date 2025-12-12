@@ -5,8 +5,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 
 # config
-docs_dir_path = r"C:\Users\RakeshLakmishetti\Desktop\New folder (2)\docs_dir"
-vector_db_path = r"C:\Users\RakeshLakmishetti\Desktop\New folder (2)\vector_db"
+docs_dir_path = r"docs_dir_path"
+vector_db_path = r"vector_db_path"
 collection_name = "document_collection"
 
 # ---- 1. Load PDFs ----
@@ -50,5 +50,6 @@ print("Vector DB created successfully with TF-IDF embeddings!")
 import pickle
 with open("tfidf_vectorizer.pkl", "wb") as f:
     pickle.dump(vectorizer, f)
+
 
 print("TF-IDF vectorizer saved!")
