@@ -16,3 +16,4 @@ export GROQ_API_KEY="your_api_key"
 ## Notes
 - Uses TF-IDF instead of heavy embeddings.
 - Fast, lightweight, and easy to run.
+- If you change documents and TF-IDF vocabulary changes, delete the old vector_db before re-ingesting.
